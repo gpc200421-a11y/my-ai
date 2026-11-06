@@ -21,7 +21,7 @@ if prompt := st.chat_input("এখানে লিখেন..."):
 
     with st.chat_message("assistant"):
         chat = client.chat.completions.create(
-            model="llama-3.1-8b-instant",
+            model="openai/gpt-oss-20b",
             messages=[{"role": "system", "content": "তুমি একজন বন্ধুর মত, সব সময় বাংলায় উত্তর দিবে।"}] + st.session_state.messages
         )
         reply = chat.choices[0].message.content
